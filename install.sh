@@ -63,3 +63,19 @@ fi
 echo "Successfully installed capicxx-core-runtime"
 sleep 1
 copyToLib
+
+
+#capixx-someip
+git clone https://github.com/GENIVI/capicxx-someip-runtime.git
+cd capicxx-someip-runtime
+git checkout tags/3.1.12.9
+mkdir build
+cd build
+cmake -DUSE_INSTALLED_COMMONAPI=OFF ..
+make -j
+if [ $? -ne 0 ]
+then
+echo "Error in capicxx-someip-runtime"
+exit -1
+fi
+copyToLib
