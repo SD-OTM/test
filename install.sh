@@ -79,3 +79,18 @@ echo "Error in capicxx-someip-runtime"
 exit -1
 fi
 copyToLib
+os@os-VirtualBox:~/os$ ~/os/commonapi-generator/commonapi-generator-linux-x86_64 -sk /home/os/os/vsomeip_helloworld/fidl/HelloWorld.fidl
+Executing CommonAPI Core Code Generation...
+
+Skeleton code will be created
+Using Franca Version 0.9.1.201412191134
+and CommonAPI Version 3.1.12.v201907221047
+Generating code for /home/os/os/vsomeip_helloworld/fidl/HelloWorld.fidl
+os@os-VirtualBox:~/os$ ~/os/commonapi_someip_generator/commonapi-someip-generator-linux-x86_64 -ll verbose /home/os/os/vsomeip_helloworld/fidl/HelloWorld.fdepl
+Executing CommonAPI SomeIP Code Generation...
+
+Using Franca Version 0.9.1.201412191134
+SomeIP validation: Validaton of deployment finished with: 0 errors, 0 warnings.
+Generating code for /home/os/os/vsomeip_helloworld/fidl/HelloWorld.fdepl
+os@os-VirtualBox:~/os$ 
+
